@@ -1,6 +1,7 @@
 # PhotonFlight: Fiber-Optic Autonomous UAV
 
 PhotonFlight is a **fiber-optic-tethered autonomous quadcopter** designed for operation in **RF-denied or GPS-degraded environments**.  
+
 The platform replaces traditional RF telemetry with a **secure bidirectional SFP fiber link**, enabling **low-latency video streaming, real-time telemetry, and reliable command/control communication** between the UAV and ground control station.
 
 The system integrates **ArduPilot flight control, embedded Linux module, onboard AI vision processing, and fiber-optic networking**, demonstrating a complete embedded system spanning hardware, firmware, networking, and autonomy.
@@ -22,6 +23,12 @@ An onboard AI camera enables **real-time object detection and autonomous trackin
 The result is a **robust embedded UAV platform capable of operating in communication-contested environments**.
 
 ---
+
+# Demo
+
+The video below shows the drone through its takeoff, tracking, and landing sequence. The drone first takes off in **Loiter** mode, switches to **Guided** mode, and then back to **Loiter** for landing. The tracking script is active at all times, but the flight controller only accepts the flight commands in **Guided** mode.
+
+
 
 # System Architecture
 
