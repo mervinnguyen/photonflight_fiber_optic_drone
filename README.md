@@ -28,7 +28,7 @@ The result is a **robust embedded UAV platform capable of operating in communica
 
 The video below shows the drone through its takeoff, tracking, and landing sequence. The drone first takes off in **Loiter** mode, switches to **Guided** mode, and then back to **Loiter** for landing. The tracking script is active at all times, but the flight controller only accepts the flight commands in **Guided** mode.
 
-
+https://github.com/user-attachments/assets/d5699f7d-33b4-4451-9186-9bc827cc7043
 
 # System Architecture
 
