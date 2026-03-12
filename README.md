@@ -26,7 +26,7 @@ The result is a **robust embedded UAV platform capable of operating in communica
 
 # Demo
 
-The video below shows the drone through its takeoff, tracking, and landing sequence. The drone first takes off in **Loiter** mode, switches to **Guided** mode, and then back to **Loiter** for landing. The tracking script is active at all times, but the flight controller only accepts the flight commands in **Guided** mode.
+The video below shows the drone through its takeoff, tracking, and landing sequence. The drone first takes off in **Loiter** mode, switches to **Guided** mode, and then back to **Loiter** for landing. The tracking script is active at all times, but the flight controller only accepts the flight commands in **Guided** mode. The entire demo was shown without any wireless/radio communications. All telemetry data, video, and joystick input were sent over a series of wired connections to the drone. The only wireless signal emitted from the drone was GPS for position tracking.
 
 https://github.com/user-attachments/assets/d5699f7d-33b4-4451-9186-9bc827cc7043
 
@@ -46,6 +46,7 @@ Each layer performs a specific role in the overall system.
 | Motor Control | Direct actuation of propulsion system |
 
 <img width="6109" height="5374" alt="e" src="https://github.com/user-attachments/assets/7ba3364f-91c0-4ff5-98d2-8df0399958b6" />
+
 ---
 
 # Hardware Architecture
@@ -71,6 +72,8 @@ ESCs receive control signals from the flight controller (FC) and translates them
 ---
 
 ## Power System
+
+<img width="7793" height="5375" alt="e(2)" src="https://github.com/user-attachments/assets/473ca380-0b09-4dcc-a940-32ef571e235d" />
 
 The drone is powered by a **6S1P LiPo battery** (6 cells in series) distributed through a PCB integrated on the frame. On top of this we have step down converters to power our raspberry Pi and our SFP to Ethernet converter.
 
@@ -124,6 +127,9 @@ The Raspberry Pi communicates with the flight controller through **MAVLink inter
 ---
 
 # Fiber-Optic Communication Pipeline
+
+![e](https://github.com/user-attachments/assets/95bf0324-b551-4cad-8efd-d9007c29ff98)
+
 
 PhotonFlight replaces traditional RF telemetry with a **fiber-optic communication architecture**.
 
