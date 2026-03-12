@@ -54,13 +54,7 @@ PhotonFlight is built using a combination of **commercial off-the-shelf componen
 
 ## Airframe
 
-The UAV uses an **8-inch quadcopter carbon fiber frame** providing structural mounting for propulsion, avionics, and communication hardware.
-
-Key design considerations include:
-
-- vibration isolation
-- weight optimization
-- secure component mounting
+The UAV uses an **8-inch quadcopter frame** providing structural mounting for propulsion, avionics, and communication hardware. It is made from nylon which allows us to have a relatively light and modular frame while keeping our cost low. This can be improved in the future by using an all carbon fiber frame. 
 
 ---
 
@@ -68,27 +62,28 @@ Key design considerations include:
 
 The propulsion system consists of:
 
-- **Brushless DC motors (BLDC)**
-- **high-efficiency propellers**
-- **electronic speed controllers (ESCs)**
+- **4 Brushless DC motors (BLDC)**
+- **High-efficiency propellers**
+- **4IN1 electronic speed controllers (ESCs)**
 
-ESCs receive control signals from the flight controller to regulate thrust and maintain stability.
+ESCs receive control signals from the flight controller (FC) and translates them into how much power will be delievered to each motor. The FC talks to the ESC over a protocol known as DSHOT, which is a digitial protocol that aims to solve issues with traditional PWM (Pulse Width Modulation) protocols. The main benefit is that it relies on a digital signal over an analog one, which means it is more resistant to noise and oscillator speed variations.
 
 ---
 
 ## Power System
 
-The drone is powered by a **high-discharge LiPo battery** distributed through a **Power Distribution Board (PDB)**.
+The drone is powered by a **6S1P LiPo battery** (6 cells in series) distributed through a PCB integrated on the frame. On top of this we have step down converters to power our raspberry Pi and our SFP to Ethernet converter.
 
-The power subsystem manages:
+Voltage Ranges for our Devices:
+- 22.2V: ESC and Flight Controller (has its own voltage regulator)
+- 12V: SFP to Ethernet Converter
+- 5V: Raspberry Pi and AI Enabled Camera
 
-- high-current delivery
-- electrical isolation
-- voltage regulation for onboard electronics
-
-Battery safety procedures and charge management protocols are implemented for safe operation.
+Battery safety procedures and charge management protocols are implemented for safe operation. We ensure that our batteries are regularly balanced and are charged under supervision. LiPo batteries carry many risks due to its chemistry and energy dense nature. We keep them in fire resistant bags as a precaution.
 
 ---
+
+# Look at stuff below this and EDIT!!!
 
 # Flight Control System
 
@@ -153,20 +148,6 @@ Data transmitted through the fiber link includes:
 
 ---
 
-# Vision System
-
-PhotonFlight incorporates two vision modules enabling perception capabilities.
-
-## Infrared Camera
-
-The infrared camera enables **thermal imaging and low-light operation**, allowing the UAV to function in environments such as:
-
-- disaster response zones
-- low visibility environments
-- nighttime search-and-rescue missions
-
----
-
 ## AI Camera
 
 The onboard AI camera performs **real-time object detection and tracking** using pretrained neural network models.
@@ -206,43 +187,6 @@ These include:
 - pre-flight validation checklists
 
 These systems mitigate risk during autonomous flight operations.
-
----
-
-# Key Technologies
-
-PhotonFlight integrates multiple hardware and software technologies:
-
-**Flight Control**
-- ArduPilot
-- MAVLink
-
-**Embedded Systems**
-- Raspberry Pi 4
-- embedded Linux
-
-**Networking**
-- fiber-optic SFP communication
-- telemetry streaming
-
-**Perception**
-- onboard AI camera
-- computer vision inference
-
----
-
-# Documentation & Project Resources
-
-Project documentation and development artifacts are maintained collaboratively.
-
-Resources include:
-
-- system architecture documentation
-- hardware integration notes
-- flight test logs
-- telemetry data analysis
-- design review presentations
-- safety procedures and compliance documentation
 
 ---
 
