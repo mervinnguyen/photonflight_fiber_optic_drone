@@ -86,11 +86,9 @@ Battery safety procedures and charge management protocols are implemented for sa
 
 ---
 
-# Look at stuff below this and EDIT!!!
-
 # Flight Control System
 
-The UAV uses an **ArduPilot-based flight controller** responsible for deterministic flight control.
+The UAV uses an **Matek F405** responsible for deterministic flight control.
 
 Responsibilities include:
 
@@ -178,34 +176,5 @@ A ground control station running **Mission Planner or QGroundControl** enables o
 - issue control commands
 
 Communication between the UAV and the ground station occurs over the fiber link.
-
----
-
-# Safety Systems
-
-Several redundant safety mechanisms are implemented to ensure safe operation.
-
-These include:
-
-- geofencing
-- return-to-launch (RTL)
-- emergency failsafe procedures
-- pre-flight validation checklists
-
-These systems mitigate risk during autonomous flight operations.
-
----
-
-# Project Focus
-
-PhotonFlight demonstrates the integration of:
-
-- embedded flight control systems  
-- secure communication infrastructure  
-- onboard AI perception  
-
-into a UAV platform capable of operating in **RF-contested or GPS-degraded environments**.
-
-This project highlights the application of **embedded systems engineering, networking architecture, and autonomous robotics** in real-world mission scenarios.
 
 
